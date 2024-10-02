@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Casa de Festas</title>
+</head>
+
+<body>
+  <section class="pag">
+    <h1 class="text-center"><output id="titulo"> Super Mario Brós </output></h1>
+    <form method="post">
+
+
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Nome">
+      <label for="telefone">Telefone</label>
+      <input type="tel" class="form-control" id="telefone" placeholder="Telefone">
+
+      <label for="email">E-mail</label>
+      <input type="email" class="form-control" id="email" placeholder="E-mail">
+      <label for="data">Data da festa</label>
+      <input type="date" class="form-control" id="data">
+
+      <label>Horário</label>
+      <input class="form-check-input" type="radio" name="hora" id="08h" value="8h - 12h">
+      <label class="form-check-label" for="08h">08h - 12h</label>
+      <input class="form-check-input" type="radio" name="hora" id="14h" value="14h - 18h">
+      <label class="form-check-label" for="14h">14h - 18h</label>
+      <input class="form-check-input" type="radio" name="hora" id="20h" value="20h - 0h">
+      <label class="form-check-label" for="20h">20h - 00h</label>
+
+      <p>
+        <label>Tema</label>
+        <select id="tema" class="form-control" onchange="trocaTema()">
+          <option value="Mario"> Super Mário Brós</option>
+          <option value="Masha"> Masha e o Urso</option>
+          <option value="PjMasks"> Os PjMasks</option>
+        </select>
+      </p>
+
+      <p>
+        <input class="form-check-input" type="checkbox" id="guloseimas" onchange="calc(350,this.checked)">
+        <label class="form-check-label" for="guloseimas">
+          Mesa de Guloseimas
+        </label>
+      </p>
+
+      <p>
+        <input class="form-check-input" type="checkbox" id="personagem" onchange="calc(250,this.checked)">
+        <label class="form-check-label" for="personagem">
+          Personagem
+        </label>
+      </p>
+
+      <p>
+        <input class="form-check-input" type="checkbox" id="atracoes" onchange="calc(300,this.checked)">
+        <label class="form-check-label" for="atracoes">
+          Atrações
+        </label>
+      </p>
+
+      <p>
+        <input class="form-check-input" type="checkbox" id="maquiagem" onchange="calc(150,this.checked)">
+        <label class="form-check-label" for="maquiagem">
+          Maquiagem Infantil
+        </label>
+      </p>
+
+
+      <p>
+        <input class="form-check-input" type="checkbox" id="brindes" onchange="calc(100,this.checked)">
+        <label class="form-check-label" for="brindes">
+          Brindes
+        </label>
+      </p>
+
+
+      <p class="text-center" id="saida">
+        R$ <output id="total"> 0 </output>
+      </p>
+
+      <button type="reset">Limpar</button>
+      <button type="submit" onclick="alerta()">Enviar</button>
+
+      <div id="imagem">
+        <img src="img/mario2.png" id="foto">
+      </div>
+
+    </form>
+  </section>
+
+
+
+
+
+
+
+
+  <script src="js/script.js"></script>
+
+
+ 
+
+
+
+</body>
+
+</html>
